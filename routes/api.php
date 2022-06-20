@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApiTokenController;
+use App\Http\Controllers\ToolController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('auth/register',[ApiTokenController::class,'register']);
 Route::post('auth/login',[ApiTokenController::class,'login']);
+Route::middleware('auth:sanctum')->post('tools/create', [ToolController::class,'store']);
+
+Route::get('tools',[ToolController::class,'index']);
+

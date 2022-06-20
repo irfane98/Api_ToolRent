@@ -17,11 +17,13 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
+            $table->integer('user_id');
             $table->string('description');
-            $table->string('price');
+            $table->integer('price');
             $table->integer('categories');
-            $table->string('image_url');
-            $table->json('location');
+            $table->string('photo');
+
+            //$table->json('location');
         });
     }
 
