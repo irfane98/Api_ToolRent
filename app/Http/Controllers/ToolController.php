@@ -40,7 +40,6 @@ class ToolController extends Controller
 
         ]);
 
-        //STATUS 201, DREAM CREATED
         return response()->json([
             'id' => $tool->id,
             'created_at' => $tool->created_at,
@@ -75,6 +74,6 @@ class ToolController extends Controller
     
     public function destroy($id)
     {
-        //
+        
     }
 }
